@@ -23,21 +23,20 @@ The project implements **two families of summarizers** and compares them with RO
 ## Project structure
 ```
 lecture-notes-summarizer/
-├── app.py                 # Streamlit UI
-├── main.py                # command-line interface
+├── app.py                
+├── main.py                
 ├── requirements.txt
 ├── src/
-│   ├── preprocess.py      # cleaning + sentence splitting
-│   ├── extractive.py      # TF-IDF and TextRank
-│   ├── abstractive.py     # transformer summarizer with chunking
-│   ├── pdf_utils.py       # PDF text extraction
-│   ├── keywords.py        # key-term extraction
-│   └── evaluate.py        # ROUGE evaluation
-├── sample_notes/          # example notes + reference summary
+│   ├── preprocess.py      
+│   ├── extractive.py     
+│   ├── abstractive.py    
+│   ├── pdf_utils.py       
+│   ├── keywords.py        
+│   └── evaluate.py        
+├── sample_notes/          
 ├── tests/
-├── notebooks/             # your experiments
-└── results/               # evaluation tables and plots
-```
+├── notebooks/            
+└── results/               
 
 ## Setup
 ```bash
