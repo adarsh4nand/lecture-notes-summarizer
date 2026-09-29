@@ -1,0 +1,15 @@
+Searching Algorithms - Lecture Notes
+
+Searching is the process of finding the position of a target value inside a collection of data. The two most common searching algorithms taught in an introductory data structures course are linear search and binary search. Choosing between them depends on whether the data is sorted and how large it is.
+
+Linear search checks every element of the list one by one, starting from the first element, until the target is found or the list ends. It works on any list, sorted or unsorted, and it is very simple to implement. In the worst case the target is at the end of the list or missing entirely, so the algorithm makes n comparisons and its time complexity is O(n). If the list contains duplicates, linear search naturally returns the first occurrence because it stops at the first match.
+
+Binary search requires the list to be sorted. It compares the target with the middle element. If they are equal, the search is finished. If the target is smaller, the algorithm discards the right half of the list, and if the target is larger it discards the left half. This halving repeats until the target is found or the remaining range is empty. Because the search space is halved at every step, binary search needs at most about log2(n) comparisons, giving a time complexity of O(log n).
+
+For a list of one million elements, linear search may need one million comparisons in the worst case, while binary search needs only about twenty. This large difference is why sorting the data first is often worthwhile when many searches will be performed. However, sorting itself costs O(n log n), so for a single search on unsorted data linear search can still be the better choice.
+
+Binary search has a subtle issue with duplicates. A standard implementation returns whichever matching index it reaches first, which is not necessarily the first occurrence. To find the first occurrence, the algorithm must keep searching the left half even after finding a match, and record the best index seen so far. This modified version still runs in O(log n) time.
+
+Counting comparisons is a practical way to compare the two algorithms. In experiments on random sorted lists, the number of comparisons for linear search grows linearly with the list size, while the count for binary search grows very slowly. Plotting both curves clearly shows the difference between O(n) and O(log n) growth.
+
+In summary, use linear search for small or unsorted collections and binary search for large sorted collections. Always remember that binary search is only correct when the input is sorted, and take care with duplicates when the first or last occurrence is required.

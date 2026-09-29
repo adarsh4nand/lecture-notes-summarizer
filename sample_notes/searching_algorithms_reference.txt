@@ -1,0 +1,1 @@
+Linear search scans elements one by one in O(n) time and works on unsorted data, while binary search halves a sorted list at each step for O(log n) time. Binary search is much faster on large sorted lists but needs sorted input and extra care with duplicates to find the first occurrence. Use linear search for small or unsorted data and binary search for large sorted data.
