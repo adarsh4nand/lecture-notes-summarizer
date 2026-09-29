@@ -41,7 +41,7 @@ lecture-notes-summarizer/
 
 ## Setup
 ```bash
-git clone https://github.com/<your-username>/lecture-notes-summarizer.git
+git clone https://github.com/adarsh4nand/lecture-notes-summarizer.git
 cd lecture-notes-summarizer
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
@@ -78,11 +78,11 @@ Run the evaluation and paste your table here (ROUGE F1 x100):
 
 | Method | ROUGE-1 | ROUGE-2 | ROUGE-L | sec/doc |
 |---|---|---|---|---|
-| TF-IDF | _fill in_ | _fill in_ | _fill in_ | _fill in_ |
-| TextRank | _fill in_ | _fill in_ | _fill in_ | _fill in_ |
-| DistilBART | _fill in_ | _fill in_ | _fill in_ | _fill in_ |
+| TF-IDF (3 sent.) | 23.62 | 11.20 | 14.17 | 0.0 |
+| TextRank (3 sent.) | 43.33 | 15.25 | 23.33 | 0.0 |
+| DistilBART | 37.41 | 11.68 | 20.14 | 8.04 |
 
-Add 2-3 sentences on what you observed (for example: which method is faster, which reads better).
+TextRank achieved the highest ROUGE scores among the three methods on the custom sample, while TF-IDF and TextRank were substantially faster than DistilBART. DistilBART produced abstractive summaries but required about 8 seconds per document on CPU.
 
 ## Limitations
 - Abstractive models can produce statements that are not in the source (hallucination).
