@@ -64,8 +64,8 @@ python main.py my_lecture.pdf --method abstractive
 
 **Evaluation**
 ```bash
-python -m src.evaluate --n 20                  # CNN/DailyMail sample
-python -m src.evaluate --custom sample_notes   # your own notes + *_reference.txt
+python -m src.evaluate --n 20                  
+python -m src.evaluate --custom sample_notes   
 ```
 
 **Tests**
